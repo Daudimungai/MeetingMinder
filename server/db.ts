@@ -10,14 +10,25 @@ if (typeof globalThis.WebSocket === "undefined") {
 }
 
 // Check for DATABASE_URL
+console.log("Checking DATABASE_URL...");
+console.log("DATABASE_URL exists:", !!process.env.DATABASE_URL);
+console.log("DATABASE_URL value:", process.env.DATABASE_URL);
+
 if (!process.env.DATABASE_URL) {
   throw new Error(
     "DATABASE_URL must be set. Did you forget to provision a database?",
   );
 }
 
+const connectionString = process.env.DATABASE_URL;
+
 // Create a connection pool
-export const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+export const pool = new Pool({ connectionString });
+
+// Test the connection
+pool.query('SELECT NOW()')
+  .then(() => console.log('Database connection successful'))
+  .catch(err => console.error('Database connection failed:', err));
 
 // Create a drizzle instance
 export const db = drizzle({ client: pool, schema });

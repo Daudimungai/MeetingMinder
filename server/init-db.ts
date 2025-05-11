@@ -3,7 +3,7 @@ import { roles, users, guards, clients, locations } from "@shared/schema";
 import bcrypt from "bcryptjs";
 import { eq } from "drizzle-orm";
 
-async function initializeDatabase() {
+export async function initializeDatabase() {
   console.log("Starting database initialization...");
   
   try {
@@ -155,8 +155,6 @@ async function initializeDatabase() {
     console.log("Database initialization completed successfully!");
   } catch (error) {
     console.error("Error initializing database:", error);
+    throw error; // Re-throw to handle in the main server file
   }
 }
-
-// Run the initialization
-initializeDatabase();

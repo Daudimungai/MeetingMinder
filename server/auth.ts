@@ -21,12 +21,17 @@ declare global {
 
 // Authenticate user and generate JWT token
 export async function authenticate(username: string, password: string) {
+  console.log('Attempting to authenticate user:', username);
+  
   // Validate user credentials
   const user = await storage.validateUserPassword(username, password);
   
   if (!user) {
+    console.log('Authentication failed: Invalid credentials');
     return null;
   }
+  
+  console.log('User authenticated successfully:', user.username);
   
   // Generate JWT token
   const token = jwt.sign(
