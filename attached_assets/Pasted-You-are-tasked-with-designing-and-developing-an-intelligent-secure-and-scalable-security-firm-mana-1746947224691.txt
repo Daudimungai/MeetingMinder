@@ -1,0 +1,82 @@
+You are tasked with designing and developing an intelligent, secure, and scalable security firm management system for GEMINI Security Firm, a fast-growing private security company based in Meru Town, Kenya. The company operates opposite Magunas Supermarket and currently manages over 103 guards. It offers services such as:
+
+Security Consultation
+
+Physical Security Deployment
+
+Events Security Services
+
+Executive Protection for VIPs
+
+🎯 Primary Objectives
+Replace the current manual, book-based system with a digital platform that addresses these critical issues:
+
+System Complexity: Replace error-prone, confusing manual procedures with a clean, guided user interface for all employee levels.
+
+Data Redundancy: Implement strict form validation, role-based access, and auto-checking to avoid duplicate guard entries or task overlaps.
+
+Data Loss: Introduce real-time cloud backups, data versioning, and offline-to-online sync capabilities for remote team leaders.
+
+Data Security: Integrate bank-level security: multi-factor authentication, end-to-end encryption, user audit trails, and role-based permissions (Admin, Chief of Staff, Team Leaders, Guards).
+
+Data Inconsistency: Ensure real-time syncing between team leaders and head office. Use push notifications or alert systems to prompt timely updates and approvals.
+
+🧠 Smart Features Required
+Role-Based Dashboard Interfaces:
+
+Admin: Full system access, staff control, analytics.
+
+Chief of Staff: Guard assignments, schedule approvals, reporting.
+
+Team Leaders: Field-level reporting, attendance marking, incident logging.
+
+Guards: View shifts, report incidents, request leave.
+
+Dynamic Guard Management System:
+
+Auto-generate schedules, duty rosters, and shift tracking.
+
+QR Code/Facial Recognition for attendance.
+
+Incident Reporting Module:
+
+Upload photos, GPS-tagged locations, and report categories.
+
+Auto-alert admin for high-priority incidents.
+
+Client & Contract Management:
+
+Store client details, service contracts, deployment plans.
+
+Notification System:
+
+Email/SMS push notifications for shift changes, late reporting, incident alerts.
+
+Analytics & Reports:
+
+Attendance rates, guard deployment statistics, incident heatmaps, performance scoring.
+
+🛠️ Tech Stack Suggestions
+Frontend: React.js or Flutter (Web + Mobile Support)
+
+Backend: Node.js (Express) or Django REST Framework
+
+Database: PostgreSQL or Firebase (for real-time data)
+
+Security: JWT tokens, OAuth2, AES encryption
+
+Hosting: Google Cloud / Firebase / AWS
+
+📱 Optional
+Build a companion mobile app for team leaders and guards to:
+
+Check-in via GPS
+
+Report incidents
+
+View schedules
+
+Get urgent alerts
+
+🎯 Outcome:
+A powerful, efficient, and highly secure security operations platform that reduces human error, enhances real-time decision-making, and provides full visibility into the company’s field operations from a central dashboard.
